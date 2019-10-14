@@ -6,7 +6,6 @@
 #
 
 import numpy as np
-
 from common.arguments import parse_args
 import torch
 
@@ -43,6 +42,7 @@ elif args.dataset.startswith('humaneva'):
     from common.humaneva_dataset import HumanEvaDataset
     dataset = HumanEvaDataset(dataset_path)
 elif args.dataset.startswith('custom'):
+    # 添加自己的2d关键点
     from common.custom_dataset import CustomDataset
     dataset = CustomDataset('data/data_2d_' + args.dataset + '_' + args.keypoints + '.npz')
 else:
