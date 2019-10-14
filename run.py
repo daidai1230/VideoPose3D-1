@@ -6,7 +6,6 @@
 #
 
 import numpy as np
-
 from common.arguments import parse_args
 import torch
 
